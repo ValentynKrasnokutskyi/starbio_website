@@ -38,7 +38,7 @@
                     <!-- Left Sidebar -->
                     <td valign="top" class="left-chapters">
                         <ul id="leftchapters">
-                            {% if cat_selected == 0 or cat_selected is None %}
+                            {% if cat_selected == 0 %}
                             <li class="selected">All Categories</li><!-- Selected category -->
                             {% else %}
                             <li><a href="{% url 'home' %}">All Categories</a></li><!-- All categories link -->
@@ -52,6 +52,7 @@
                                    href="https://www.youtube.com/"
                                    target="_blank" rel="nofollow"></a><!-- YouTube channel link -->
                             </li>
+                            <li>{% show_all_tags %}</li>
                         </ul>
                     </td>
                     <!-- End of Sidebar -->

@@ -4,7 +4,7 @@ from django.urls import reverse
 from django.template.loader import render_to_string
 from django.template.defaultfilters import slugify
 
-from .models import Stars
+from .models import Stars, Category, TagPost
 
 menu = [{'title': "About", 'url_name': 'about'},
           {'title': "Add article", 'url_name': 'add_page'},
@@ -12,21 +12,15 @@ menu = [{'title': "About", 'url_name': 'about'},
           {'title': "Login", 'url_name': 'login'}
         ]
 
-cats_db = [
-    {'id': 1, 'name': 'Actors'},
-    {'id': 2, 'name': 'Singers'},
-    {'id': 3, 'name': 'Athletes'},
-]
 
-
-def index(request):  # HttpRequest
-    posts = Stars.published.all()
+def index(request):
     data = {
-        'title': 'Home page',
+        'title': 'Main page',
         'menu': menu,
-        'posts': posts,
+        'posts': Stars.published.all(),
         'cat_selected': 0,
     }
+
     return render(request, 'stars/index.html', context=data)
 
 
@@ -58,15 +52,30 @@ def login(request):
     return HttpResponse("Authorization")
 
 
-def show_category(request, cat_id):
+def show_category(request, cat_slug):
+    category = get_object_or_404(Category, slug=cat_slug)
+    posts = Stars.published.filter(cat_id=category.pk)
     data = {
-        'title': 'Show by category',
+        'title': f'Category: {category.name}',
         'menu': menu,
-        'posts': Stars.published.all(),
-        'cat_selected': cat_id,
+        'posts': posts,
+        'cat_selected': category.pk,
     }
     return render(request, 'stars/index.html', context=data)
 
 
 def page_not_found(request, exception):
     return HttpResponseNotFound('<h1>Page not found</h1>')
+
+
+def show_tag_postlist(request, tag_slug):
+    tag = get_object_or_404(TagPost, slug=tag_slug)
+    posts = tag.tags.filter(is_published=Stars.Status.PUBLISHED)
+    data = {
+        'title': f'Tag: {tag.tag}',
+        'menu': menu,
+        'posts': posts,
+        'cat_selected': None,
+    }
+
+    return render(request, 'stars/index.html', context=data)
