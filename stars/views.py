@@ -17,7 +17,7 @@ def index(request):
     data = {
         'title': 'Main page',
         'menu': menu,
-        'posts': Stars.published.all(),
+        'posts': Stars.published.all().select_related('cat'),
         'cat_selected': 0,
     }
 
@@ -54,7 +54,7 @@ def login(request):
 
 def show_category(request, cat_slug):
     category = get_object_or_404(Category, slug=cat_slug)
-    posts = Stars.published.filter(cat_id=category.pk)
+    posts = Stars.published.filter(cat_id=category.pk).select_related('cat')
     data = {
         'title': f'Category: {category.name}',
         'menu': menu,
@@ -70,7 +70,7 @@ def page_not_found(request, exception):
 
 def show_tag_postlist(request, tag_slug):
     tag = get_object_or_404(TagPost, slug=tag_slug)
-    posts = tag.tags.filter(is_published=Stars.Status.PUBLISHED)
+    posts = tag.tags.filter(is_published=Stars.Status.PUBLISHED).select_related('cat')
     data = {
         'title': f'Tag: {tag.tag}',
         'menu': menu,

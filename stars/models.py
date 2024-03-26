@@ -22,7 +22,8 @@ class Stars(models.Model):
     is_published = models.BooleanField(choices=Status.choices, default=Status.DRAFT)  # Status of publication
     cat = models.ForeignKey('Category', on_delete=models.PROTECT, related_name='posts')  # Category of the star
     tags = models.ManyToManyField('TagPost', blank=True, related_name='tags')  # Tags associated with the star
-    spouse = models.OneToOneField('Spouse', on_delete=models.SET_NULL, null=True, blank=True, related_name='star')  # Spouse of the star
+    spouse = models.OneToOneField('Spouse', on_delete=models.SET_NULL,
+                                  null=True, blank=True, related_name='star')  # Spouse of the star
 
     objects = models.Manager()
     published = PublishedModel()  # Custom manager for published stars
@@ -68,6 +69,7 @@ class TagPost(models.Model):
 class Spouse(models.Model):
     name = models.CharField(max_length=100)  # Name of the spouse
     age = models.IntegerField(null=True)  # Age of the spouse
+    m_count = models.IntegerField(blank=True, default=0)  # number of marriages of the spouse
 
     def __str__(self):
         return self.name
