@@ -27,3 +27,6 @@ urlpatterns = [
 
 
 handler404 = page_not_found
+
+admin.site.site_header = "Administration Panel"
+admin.site.index_title = "Celebrities of the world"

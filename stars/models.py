@@ -14,21 +14,24 @@ class Stars(models.Model):
         DRAFT = 0, 'Draft'
         PUBLISHED = 1, 'Published'
 
-    title = models.CharField(max_length=255)  # Title of the star
-    slug = models.SlugField(max_length=255, db_index=True, unique=True)  # Unique slug for URLs
-    content = models.TextField(blank=True)  # Content of the star
-    time_create = models.DateTimeField(auto_now_add=True)  # Date and time of creation
-    time_update = models.DateTimeField(auto_now=True)  # Date and time of last update
-    is_published = models.BooleanField(choices=Status.choices, default=Status.DRAFT)  # Status of publication
-    cat = models.ForeignKey('Category', on_delete=models.PROTECT, related_name='posts')  # Category of the star
-    tags = models.ManyToManyField('TagPost', blank=True, related_name='tags')  # Tags associated with the star
+    title = models.CharField(max_length=255, verbose_name='Title')  # Title of the star
+    slug = models.SlugField(max_length=255, db_index=True, unique=True, verbose_name='Slug')  # Unique slug for URLs
+    content = models.TextField(blank=True, verbose_name='Article text')  # Content of the star
+    time_create = models.DateTimeField(auto_now_add=True, verbose_name='Time create')  # Date and time of creation
+    time_update = models.DateTimeField(auto_now=True, verbose_name="Update time")  # Date and time of last update
+    is_published = models.BooleanField(choices=tuple(map(lambda x: (bool(x[0]), x[1]), Status.choices)),
+                                       default=Status.DRAFT, verbose_name='Status')  # Status of publication
+    cat = models.ForeignKey('Category', on_delete=models.PROTECT, related_name='posts', verbose_name='Category')  # Category of the star
+    tags = models.ManyToManyField('TagPost', blank=True, related_name='tags', verbose_name='Tags')  # Tags associated with the star
     spouse = models.OneToOneField('Spouse', on_delete=models.SET_NULL,
-                                  null=True, blank=True, related_name='star')  # Spouse of the star
+                                  null=True, blank=True, related_name='star', verbose_name='Spouse')  # Spouse of the star
 
     objects = models.Manager()
     published = PublishedModel()  # Custom manager for published stars
 
     class Meta:
+        verbose_name = 'Star'
+        verbose_name_plural = 'Stars'
         ordering = ['-time_create']  # Ordering stars by creation time in descending order
         indexes = [
             models.Index(fields=['-time_create']),  # Index for faster querying by creation time
@@ -43,8 +46,12 @@ class Stars(models.Model):
 
 # Model representing a category
 class Category(models.Model):
-    name = models.CharField(max_length=100, db_index=True)  # Name of the category
+    name = models.CharField(max_length=100, db_index=True, verbose_name='Category')  # Name of the category
     slug = models.SlugField(max_length=255, unique=True, db_index=True)  # Unique slug for URLs
+
+    class Meta:
+        verbose_name = 'Category'
+        verbose_name_plural = 'Categories'
 
     def get_absolute_url(self):
         return reverse('category', kwargs={'cat_slug': self.slug})  # URL pattern for accessing a category detail view
