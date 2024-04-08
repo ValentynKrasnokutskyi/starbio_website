@@ -23,6 +23,7 @@ class Stars(models.Model):
         MinLengthValidator(1, message='Minimum 1 characters'),
         MaxLengthValidator(50, message='Maximum 50 characters'),
                             ])  # Unique slug for URLs
+    photo = models.ImageField(upload_to="photos/%Y/%m/%d/", default=None, blank=True, null=True, verbose_name="Photo")
     content = models.TextField(blank=True, verbose_name='Article text')  # Content of the star
     time_create = models.DateTimeField(auto_now_add=True, verbose_name='Time create')  # Date and time of creation
     time_update = models.DateTimeField(auto_now=True, verbose_name="Update time")  # Date and time of last update
@@ -90,3 +91,7 @@ class Spouse(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class UploadFiles(models.Model):
+    file = models.FileField(upload_to='uploads_model')

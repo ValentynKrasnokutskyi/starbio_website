@@ -4,8 +4,8 @@ from django.urls import reverse
 from django.template.loader import render_to_string
 from django.template.defaultfilters import slugify
 
-from .forms import AddPostForm
-from .models import Stars, Category, TagPost
+from .forms import AddPostForm, UploadFileForm
+from .models import Stars, Category, TagPost, UploadFiles
 
 menu = [{'title': "About", 'url_name': 'about'},
           {'title': "Add article", 'url_name': 'add_page'},
@@ -25,8 +25,23 @@ def index(request):
     return render(request, 'stars/index.html', context=data)
 
 
+# def handle_uploaded_file(f):
+#     with open(f"uploads/{f.name}", "wb+") as destination:
+#         for chunk in f.chunks():
+#             destination.write(chunk)
+
+
 def about(request):
-    return render(request, 'stars/about.html', {'title': 'About', 'menu': menu})
+    if request.method == "POST":
+        form = UploadFileForm(request.POST, request.FILES)
+        if form.is_valid():
+            #  handle_uploaded_file(form.cleaned_data['file'])
+            fp = UploadFiles(file=form.cleaned_data['file'])
+            fp.save()
+    else:
+        form = UploadFileForm()
+    return render(request, 'stars/about.html',
+                  {'title': 'About', 'menu': menu, 'form': form})
 
 
 def show_post(request, post_slug):  # displaying articles by their ID
@@ -43,7 +58,7 @@ def show_post(request, post_slug):  # displaying articles by their ID
 
 def addpage(request):
     if request.method == 'POST':
-        form = AddPostForm(request.POST)
+        form = AddPostForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             return redirect('home')

@@ -1,4 +1,6 @@
 from django.contrib import admin, messages
+from django.utils.safestring import mark_safe
+
 from .models import Stars, Category
 
 
@@ -26,10 +28,11 @@ class MarriedFilter(admin.SimpleListFilter):
 @admin.register(Stars)
 class WomenAdmin(admin.ModelAdmin):
     # Define the fields to be displayed and configured in the admin interface
-    fields = ['title', 'slug', 'content', 'cat', 'spouse', 'tags']
+    fields = ['title', 'slug', 'content', 'photo', 'post_photo', 'cat', 'spouse', 'tags']
+    readonly_fields = ['post_photo']
     prepopulated_fields = {"slug": ("title",)}
     filter_horizontal = ['tags']
-    list_display = ('title', 'time_create', 'is_published', 'cat', 'brief_info')  # Displayed columns in the admin list view
+    list_display = ('title', 'post_photo', 'time_create', 'is_published', 'cat')  # Displayed columns in the admin list view
     list_display_links = ('title',)  # Make the title clickable to view details
     list_editable = ('is_published',)  # Enable editing of 'is_published' field directly from list view
     ordering = ['-time_create', 'title']  # Default ordering of records in the list view
@@ -37,11 +40,14 @@ class WomenAdmin(admin.ModelAdmin):
     actions = ['set_published', 'set_draft']  # Custom actions available in the admin interface
     search_fields = ['title__startswith', 'cat__name']  # Fields to be searched in the admin interface
     list_filter = [MarriedFilter, 'cat__name', 'is_published']  # Filters displayed in the sidebar
+    save_on_top = True
 
     # Custom method to display a brief info about the star
-    @admin.display(description='Brief description', ordering='content')
-    def brief_info(self, stars: Stars):
-        return f"Description {len(stars.content)} characters."
+    @admin.display(description='Image')
+    def post_photo(self, women: Stars):
+        if women.photo:
+            return mark_safe(f"<img src='{women.photo.url}' width=50>")
+        return "Without photo"
 
     # Custom action to publish selected posts
     @admin.action(description='Publish selected posts')

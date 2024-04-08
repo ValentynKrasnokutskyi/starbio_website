@@ -12,7 +12,10 @@ class AddPostForm(forms.ModelForm):  # Form for adding a new post
 
     class Meta:  # Meta class defining form behavior
         model = Stars  # Model associated with the form
-        fields = ['title', 'slug', 'content', 'is_published', 'cat', 'spouse', 'tags']  # Fields to include in the form
+
+        # Fields to include in the form
+        fields = ['title', 'slug', 'content', 'photo', 'is_published', 'cat', 'spouse', 'tags']
+
         labels = {'slug': 'URL'}  # Custom labels for form fields
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-input'}),
@@ -30,3 +33,7 @@ class AddPostForm(forms.ModelForm):  # Form for adding a new post
             raise ValidationError("Must only contain alphabetic characters, hyphen and space or invalid input format!")
 
         return title
+
+
+class UploadFileForm(forms.Form):
+    file = forms.ImageField(label="Image")
