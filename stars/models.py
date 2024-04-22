@@ -1,3 +1,4 @@
+from django.contrib.auth import get_user_model
 from django.core.validators import MinLengthValidator, MaxLengthValidator
 from django.db import models
 from django.urls import reverse
@@ -36,6 +37,8 @@ class Stars(models.Model):
     spouse = models.OneToOneField('Spouse', on_delete=models.SET_NULL,
                                   null=True, blank=True, related_name='star',
                                   verbose_name='Spouse')  # Spouse of the star
+    author = models.ForeignKey(get_user_model(), on_delete=models.SET_NULL, related_name='posts', null=True,
+                               default=None)  # Author of the article
 
     objects = models.Manager()
     published = PublishedModel()  # Custom manager for published stars

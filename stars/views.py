@@ -1,3 +1,5 @@
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponse, HttpResponseNotFound, Http404
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse, reverse_lazy
@@ -21,6 +23,7 @@ class StarsHome(DataMixin, ListView):  # View for displaying the main page
         return Stars.published.all().select_related('cat')  # All published articles
 
 
+@login_required  # @login_required(login_url='/admin/')
 def about(request):
     if request.method == "POST":
         form = UploadFileForm(request.POST, request.FILES)
@@ -47,11 +50,17 @@ class ShowPost(DataMixin, DetailView):
         return get_object_or_404(Stars.published, slug=self.kwargs[self.slug_url_kwarg])  # Published post
 
 
-class AddPage(DataMixin, CreateView):   # View for adding a new post
+class AddPage(LoginRequiredMixin, DataMixin, CreateView):   # View for adding a new post
     form_class = AddPostForm   # Form class
     template_name = 'stars/addpage.html'  # Template name
     success_url = reverse_lazy('home')  # URL to redirect to after successful save
     title_page = 'Adding an article'
+    #  login_url = '/admin/'
+
+    def form_valid(self, form):
+        s = form.save(commit=False)
+        s.author = self.request.user
+        return super().form_valid(form)
 
 
 class UpdatePage(DataMixin, UpdateView):  # View for editing a post

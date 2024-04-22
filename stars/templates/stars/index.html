@@ -4,7 +4,8 @@
 <ul class="list-articles">
     {% for p in posts %}
     <li><div class="article-panel">
-         <p class="first">Category: {{p.cat.name}}</p>
+         <p class="first">Category: {{p.cat.name}} | author:
+             {{p.author.username|default:"unknown"}}</p>
          <p class="last">Date: {{p.time_update|date:"d-m-Y H:i:s"}}</p>
         </div>
         {% if p.photo %}
