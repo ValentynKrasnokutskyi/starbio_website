@@ -21,12 +21,15 @@
                     <li class="logo"><a href="{% url 'home' %}"><!-- Logo -->
                         <div class="logo"></div>
                     </a></li>
-                    {% for m in menu %}<!-- Loop for menu items -->
-                    {% if not forloop.last %}
-                    <li>{% else %}
-                    <li class="last">{% endif %}
-                        <a href="{% url m.url_name %}">{{m.title}}</a></li><!-- Menu item -->
+                    {% for m in mainmenu %}<!-- Loop for menu items -->
+                        <li><a href="{% url m.url_name %}">{{m.title}}</a></li><!-- Menu item -->
                     {% endfor %}
+
+                        {% if user.is_authenticated %}
+                            <li class="last"> {{user.username}} | <a href="{% url 'users:logout' %}">Logout</a></li>
+                        {% else %}
+                            <li class="last"><a href="{% url 'users:login' %}">Login</a> | <a href="#">Registration</a></li>
+                        {% endif %}
                 </ul>
                 <div class="clear"></div><!-- Clear float -->
             </div>
