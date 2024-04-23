@@ -1,14 +1,49 @@
 from django import forms
-from django.contrib.auth.forms import AuthenticationForm
-from django.contrib.auth.models import User
+from django.contrib.auth import get_user_model
+from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 
 
 class LoginUserForm(AuthenticationForm):
+    """
+    A form for authenticating users.
+    """
     username = forms.CharField(label='Login',
                                widget=forms.TextInput(attrs={'class': 'form-input'}))
     password = forms.CharField(label='Password',
                                widget=forms.PasswordInput(attrs={'class': 'form-input'}))
 
     class Meta:
-        model = User
+        model = get_user_model()
         fields = ['username', 'password']
+
+
+class RegisterUserForm(UserCreationForm):
+    """
+    A form for registering new users.
+    """
+    username = forms.CharField(label="Login", widget=forms.TextInput(attrs={'class': 'form-input'}))
+    password1 = forms.CharField(label="Password", widget=forms.PasswordInput(attrs={'class': 'form-input'}))
+    password2 = forms.CharField(label="Repeat password", widget=forms.PasswordInput(attrs={'class': 'form-input'}))
+
+    class Meta:
+        model = get_user_model()
+        fields = ['username', 'email', 'first_name', 'last_name', 'password1', 'password2']
+        labels = {
+            'email': 'E-mail',
+            'first_name': 'First name',
+            'last_name': 'Last name',
+        }
+        widgets = {
+            'email': forms.TextInput(attrs={'class': 'form-input'}),
+            'first_name': forms.TextInput(attrs={'class': 'form-input'}),
+            'last_name': forms.TextInput(attrs={'class': 'form-input'}),
+        }
+
+    def clean_email(self):
+        """
+        Checking the uniqueness of Email
+        """
+        email = self.cleaned_data['email']
+        if get_user_model().objects.filter(email=email).exists():
+            raise forms.ValidationError("This E-mail already exists!")
+        return email
