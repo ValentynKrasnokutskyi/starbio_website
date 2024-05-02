@@ -1,5 +1,5 @@
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.http import HttpResponse, HttpResponseNotFound, Http404
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse, reverse_lazy
@@ -50,12 +50,12 @@ class ShowPost(DataMixin, DetailView):
         return get_object_or_404(Stars.published, slug=self.kwargs[self.slug_url_kwarg])  # Published post
 
 
-class AddPage(LoginRequiredMixin, DataMixin, CreateView):   # View for adding a new post
+class AddPage(PermissionRequiredMixin, LoginRequiredMixin, DataMixin, CreateView):   # View for adding a new post
     form_class = AddPostForm   # Form class
     template_name = 'stars/addpage.html'  # Template name
     success_url = reverse_lazy('home')  # URL to redirect to after successful save
     title_page = 'Adding an article'
-    #  login_url = '/admin/'
+    permission_required = 'stars.add_stars'  # <application>.<action>_<table>
 
     def form_valid(self, form):
         s = form.save(commit=False)
@@ -63,12 +63,13 @@ class AddPage(LoginRequiredMixin, DataMixin, CreateView):   # View for adding a 
         return super().form_valid(form)
 
 
-class UpdatePage(DataMixin, UpdateView):  # View for editing a post
+class UpdatePage(PermissionRequiredMixin, DataMixin, UpdateView):  # View for editing a post
     model = Stars  # Post model
     fields = ['title', 'content', 'photo', 'is_published', 'cat']  # Editable fields
     template_name = 'stars/addpage.html'  # Template name
     success_url = reverse_lazy('home')  # URL to redirect to after successful save
     title_page = 'Editing an article'
+    permission_required = 'stars.change_stars'
 
 
 def contact(request):  # View for the contact page

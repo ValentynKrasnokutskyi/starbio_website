@@ -1,6 +1,9 @@
 {% extends 'base.html' %}
 
 {% block breadcrumbs %}
+{% if perms.stars.change_stars %}
+<p ><a href="{% url 'edit_page' post.slug %}">Edit</a></p>
+{% endif %}
 <!-- Tags -->
 {% with post.tags.all as tags %}
 {% if tags %}
