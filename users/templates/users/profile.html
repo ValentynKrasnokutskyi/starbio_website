@@ -21,7 +21,9 @@
     <p ><button type="submit">Save</button></p>
 </form>
 
+{% if not perms.users.social_auth %}
 <hr>
 <p ><a href="{% url 'users:password_change' %}">Change password</a></p>
+{% endif %}
 
 {% endblock %}
