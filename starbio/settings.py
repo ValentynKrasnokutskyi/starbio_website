@@ -30,6 +30,9 @@ env = environ.Env(
 
     SOCIAL_AUTH_GITHUB_KEY=str,
     SOCIAL_AUTH_GITHUB_SECRET=str,
+
+    SOCIAL_AUTH_GOOGLE_OAUTH2_KEY=str,
+    SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET=str,
 )
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -164,6 +167,7 @@ LOGOUT_REDIRECT_URL = 'home'
 LOGIN_URL = 'users:login'
 
 AUTHENTICATION_BACKENDS = [
+    'social_core.backends.google.GoogleOAuth2',
     'social_core.backends.github.GithubOAuth2',
     'django.contrib.auth.backends.ModelBackend',
     'users.authentication.EmailAuthBackend',
@@ -188,6 +192,10 @@ DEFAULT_USER_IMAGE = MEDIA_URL + 'users/default.png'
 
 SOCIAL_AUTH_GITHUB_KEY = env('SOCIAL_AUTH_GITHUB_KEY')
 SOCIAL_AUTH_GITHUB_SECRET = env('SOCIAL_AUTH_GITHUB_SECRET')
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = env('SOCIAL_AUTH_GOOGLE_OAUTH2_KEY')
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = env('SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET')
+SOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = ['email']
 
 SOCIAL_AUTH_PIPELINE = (
     'social_core.pipeline.social_auth.social_details',
