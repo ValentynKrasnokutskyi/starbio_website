@@ -38,6 +38,7 @@ env = environ.Env(
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# Take environment variables from .env file
 environ.Env.read_env(BASE_DIR / '.env')
 
 
@@ -108,10 +109,20 @@ WSGI_APPLICATION = 'starbio.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
+    #  -- PostgreSQL --
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / env('DATABASE_NAME'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'starbio_db',
+        'USER': 'starbio',
+        'PASSWORD': '1234',
+        'HOST': 'localhost',
+        'PORT': '5433',
     }
+    #  -- sqlite DB --
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': BASE_DIR / db.sqlite3,
+    # }
 }
 
 

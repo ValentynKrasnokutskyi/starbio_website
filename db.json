@@ -1,0 +1,1429 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2024-04-07T21:47:55.104Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "35",
+    "object_repr": "Rihanna",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Photo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2024-04-07T21:48:10.587Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "35",
+    "object_repr": "Rihanna",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Photo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2024-04-08T01:35:19.921Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "Ryan Gosling",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Article text\", \"Photo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2024-04-08T01:44:18.482Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5",
+    "object_repr": "Ariana Grande",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Article text\", \"Photo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2024-04-08T01:44:30.678Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "Julia Roberts",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Article text\", \"Photo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2024-04-08T01:44:46.981Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Margot Robbie",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Article text\", \"Photo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2024-04-08T01:45:07.890Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Angelina Jolie",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Article text\", \"Photo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2024-04-30T23:09:38.712Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "2",
+    "object_repr": "user1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2024-04-30T23:22:32.635Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "2",
+    "object_repr": "user1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2024-04-30T23:23:32.634Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "3",
+    "object_repr": "user2",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2024-04-30T23:24:32.588Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "2",
+    "object_repr": "user1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2024-05-01T01:55:57.204Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "1",
+    "object_repr": "moderator",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2024-05-01T01:57:37.909Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "2",
+    "object_repr": "user1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Groups\", \"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2024-05-03T01:52:37.203Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "2",
+    "object_repr": "social",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2024-05-04T23:30:25.702Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "4",
+    "object_repr": "ValentynKrasnokutskyi",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2024-05-04T23:35:28.478Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "5",
+    "object_repr": "ValentynKrasnokutskyi",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2024-05-06T14:53:07.552Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "7",
+    "object_repr": "kras.vvk",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2024-05-06T15:03:31.709Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "8",
+    "object_repr": "kras.vvk",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 4,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 4,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 4,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 4,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 5,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 5,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 5,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 5,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add Category",
+    "content_type": 6,
+    "codename": "add_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change Category",
+    "content_type": 6,
+    "codename": "change_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete Category",
+    "content_type": 6,
+    "codename": "delete_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view Category",
+    "content_type": 6,
+    "codename": "view_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add spouse",
+    "content_type": 7,
+    "codename": "add_spouse"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change spouse",
+    "content_type": 7,
+    "codename": "change_spouse"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete spouse",
+    "content_type": 7,
+    "codename": "delete_spouse"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view spouse",
+    "content_type": 7,
+    "codename": "view_spouse"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add Star",
+    "content_type": 8,
+    "codename": "add_stars"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change Star",
+    "content_type": 8,
+    "codename": "change_stars"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete Star",
+    "content_type": 8,
+    "codename": "delete_stars"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view Star",
+    "content_type": 8,
+    "codename": "view_stars"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add tag post",
+    "content_type": 9,
+    "codename": "add_tagpost"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change tag post",
+    "content_type": 9,
+    "codename": "change_tagpost"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete tag post",
+    "content_type": 9,
+    "codename": "delete_tagpost"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view tag post",
+    "content_type": 9,
+    "codename": "view_tagpost"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add upload files",
+    "content_type": 10,
+    "codename": "add_uploadfiles"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change upload files",
+    "content_type": 10,
+    "codename": "change_uploadfiles"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete upload files",
+    "content_type": 10,
+    "codename": "delete_uploadfiles"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view upload files",
+    "content_type": 10,
+    "codename": "view_uploadfiles"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 41,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 11,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 42,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 11,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 43,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 11,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 44,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 11,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 45,
+  "fields": {
+    "name": "Social Auth",
+    "content_type": 11,
+    "codename": "social_auth"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 46,
+  "fields": {
+    "name": "Can add association",
+    "content_type": 12,
+    "codename": "add_association"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 47,
+  "fields": {
+    "name": "Can change association",
+    "content_type": 12,
+    "codename": "change_association"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 48,
+  "fields": {
+    "name": "Can delete association",
+    "content_type": 12,
+    "codename": "delete_association"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 49,
+  "fields": {
+    "name": "Can view association",
+    "content_type": 12,
+    "codename": "view_association"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 50,
+  "fields": {
+    "name": "Can add code",
+    "content_type": 13,
+    "codename": "add_code"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 51,
+  "fields": {
+    "name": "Can change code",
+    "content_type": 13,
+    "codename": "change_code"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 52,
+  "fields": {
+    "name": "Can delete code",
+    "content_type": 13,
+    "codename": "delete_code"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 53,
+  "fields": {
+    "name": "Can view code",
+    "content_type": 13,
+    "codename": "view_code"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 54,
+  "fields": {
+    "name": "Can add nonce",
+    "content_type": 14,
+    "codename": "add_nonce"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 55,
+  "fields": {
+    "name": "Can change nonce",
+    "content_type": 14,
+    "codename": "change_nonce"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 56,
+  "fields": {
+    "name": "Can delete nonce",
+    "content_type": 14,
+    "codename": "delete_nonce"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 57,
+  "fields": {
+    "name": "Can view nonce",
+    "content_type": 14,
+    "codename": "view_nonce"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 58,
+  "fields": {
+    "name": "Can add user social auth",
+    "content_type": 15,
+    "codename": "add_usersocialauth"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 59,
+  "fields": {
+    "name": "Can change user social auth",
+    "content_type": 15,
+    "codename": "change_usersocialauth"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 60,
+  "fields": {
+    "name": "Can delete user social auth",
+    "content_type": 15,
+    "codename": "delete_usersocialauth"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 61,
+  "fields": {
+    "name": "Can view user social auth",
+    "content_type": 15,
+    "codename": "view_usersocialauth"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 62,
+  "fields": {
+    "name": "Can add partial",
+    "content_type": 16,
+    "codename": "add_partial"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 63,
+  "fields": {
+    "name": "Can change partial",
+    "content_type": 16,
+    "codename": "change_partial"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 64,
+  "fields": {
+    "name": "Can delete partial",
+    "content_type": 16,
+    "codename": "delete_partial"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 65,
+  "fields": {
+    "name": "Can view partial",
+    "content_type": 16,
+    "codename": "view_partial"
+  }
+},
+{
+  "model": "auth.group",
+  "pk": 1,
+  "fields": {
+    "name": "moderator",
+    "permissions": [
+      29,
+      30,
+      31,
+      32
+    ]
+  }
+},
+{
+  "model": "auth.group",
+  "pk": 2,
+  "fields": {
+    "name": "social",
+    "permissions": [
+      45
+    ]
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "stars",
+    "model": "category"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "stars",
+    "model": "spouse"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "stars",
+    "model": "stars"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "stars",
+    "model": "tagpost"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "stars",
+    "model": "uploadfiles"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 11,
+  "fields": {
+    "app_label": "users",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 12,
+  "fields": {
+    "app_label": "social_django",
+    "model": "association"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 13,
+  "fields": {
+    "app_label": "social_django",
+    "model": "code"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 14,
+  "fields": {
+    "app_label": "social_django",
+    "model": "nonce"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 15,
+  "fields": {
+    "app_label": "social_django",
+    "model": "usersocialauth"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 16,
+  "fields": {
+    "app_label": "social_django",
+    "model": "partial"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "1h5idvhxoqr90ymye5zbiuzimg23qyk9",
+  "fields": {
+    "session_data": "eyJnaXRodWJfc3RhdGUiOiJvQzhGSGNzb0xEMjd1Z1NacHMwaDFqajRrTW5hRlk3SiJ9:1s3iQ7:FvPycKBKcMDy9fcG1MNMLapPt9UcX1767gHNVdZ5eGE",
+    "expire_date": "2024-05-19T20:25:15.390Z"
+  }
+},
+{
+  "model": "stars.stars",
+  "pk": 1,
+  "fields": {
+    "title": "Angelina Jolie",
+    "slug": "angelina-jolie",
+    "photo": "photos/2024/04/07/Angelina_Jolie.jpeg",
+    "content": "Angelina Jolie (/dʒoʊˈliː/; born Angelina Jolie Voight; June 4, 1975) is an American actress, filmmaker and humanitarian. The recipient of numerous accolades, including an Academy Award and three Golden Globe Awards, she has been named Hollywood's highest-paid actress multiple times.\r\n\r\nJolie made her screen debut as a child alongside her father, Jon Voight, in Lookin' to Get Out (1982). Her film career began in earnest a decade later with the low-budget production Cyborg 2 (1993), followed by her first leading role in Hackers (1995). She starred in the biographical television films George Wallace (1997) and Gia (1998) and won the Academy Award for Best Supporting Actress for playing a sociopath in the 1999 drama Girl, Interrupted. Her role as the titular heroine in Lara Croft: Tomb Raider (2001) established her as a star. She continued her action-star career with Mr. & Mrs. Smith (2005), Wanted (2008), and Salt (2010). She also received critical acclaim for her performances in the dramas A Mighty Heart (2007) and Changeling (2008); the latter earned her a nomination for the Academy Award for Best Actress. Her biggest commercial successes include the fantasy picture Maleficent (2014), its 2019 sequel, and the superhero film Eternals (2021). She has performed a voice role in the animation film series Kung Fu Panda since 2008. Jolie has also directed and written the war dramas In the Land of Blood and Honey (2011), Unbroken (2014), and First They Killed My Father (2017).\r\n\r\nJolie is known for her humanitarian efforts, for which she has received a Jean Hersholt Humanitarian Award and made an honorary Dame Commander of the Order of St Michael and St George, among other honors. She promotes causes including conservation, education, and women's rights, and is most noted for her advocacy on behalf of refugees as a Special Envoy for the United Nations High Commissioner for Refugees, a position she held until 2022. Jolie has undertaken over a dozen field missions globally to refugee camps and war zones.\r\n\r\nAs a public figure, Jolie has been cited as one of the most powerful and influential people in the American entertainment industry. She has been cited as the world's most beautiful woman by various media outlets. Her personal life, including her relationships, marriages, and health, has been the subject of wide publicity. She is divorced from actors Jonny Lee Miller, Billy Bob Thornton and Brad Pitt. She has six children with Pitt, three of whom were adopted internationally.",
+    "time_create": "2024-03-10T21:02:51.182Z",
+    "time_update": "2024-04-08T01:45:07.885Z",
+    "is_published": true,
+    "cat": 1,
+    "spouse": 1,
+    "author": null,
+    "tags": [
+      2,
+      5
+    ]
+  }
+},
+{
+  "model": "stars.stars",
+  "pk": 2,
+  "fields": {
+    "title": "Margot Robbie",
+    "slug": "margot-robbie",
+    "photo": "photos/2024/04/07/Margot_Robbie.jpeg",
+    "content": "Margot Elise Robbie (/ˈmɑːrɡoʊ ˈrɒbi/ MAR-goh ROB-ee; born 2 July 1990) is an Australian actress and producer. Known for her work in both blockbuster and independent films, she has received various accolades, including nominations for three Academy Awards, six BAFTA Awards and four Golden Globe Awards. Time named her one of the 100 most influential people in the world in 2017, and Forbes named her one of the world's highest-paid actresses in 2019.\r\n\r\nBorn and raised in Queensland, Robbie began her career in 2008 on the television series Neighbours, on which she was a regular until 2011. After moving to America, she led the television series Pan Am (2011–2012) and had her breakthrough in 2013 with Martin Scorsese’s comedy film The Wolf of Wall Street. She achieved wider recognition with starring roles as Jane Porter in The Legend of Tarzan (2016) and Harley Quinn in the DC Extended Universe films, beginning with Suicide Squad (2016).\r\n\r\nRobbie received critical acclaim and a nomination for the Academy Award for Best Actress for her portrayal of figure skater Tonya Harding in the biopic I, Tonya (2017). This acclaim continued for her performances as Queen Elizabeth I in Mary Queen of Scots (2018), Sharon Tate in Once Upon a Time in Hollywood (2019), and a Fox News employee in Bombshell (2019). The last of these earned her a nomination for the Academy Award for Best Supporting Actress. Robbie has since starred as an aspiring actress in the period film Babylon (2022) and the titular fashion doll in the comedy Barbie (2023), which emerged as her highest-grossing release and as its producer, earned her a nomination for the Academy Award for Best Picture.\r\n\r\nRobbie and her husband, filmmaker Tom Ackerley, co-founded the production company LuckyChap Entertainment in 2014, under which they have produced several films, including I, Tonya, Promising Young Woman (2020), Barbie, and Saltburn (2023), as well as the Hulu series Dollface (2019–2022) and the Netflix miniseries Maid (2021).",
+    "time_create": "2024-03-10T21:16:46.174Z",
+    "time_update": "2024-04-08T01:44:46.977Z",
+    "is_published": true,
+    "cat": 1,
+    "spouse": null,
+    "author": null,
+    "tags": [
+      2
+    ]
+  }
+},
+{
+  "model": "stars.stars",
+  "pk": 3,
+  "fields": {
+    "title": "Julia Roberts",
+    "slug": "julia-roberts",
+    "photo": "photos/2024/04/07/Julia_Roberts.jpg",
+    "content": "Julia Fiona Roberts (born October 28, 1967) is an American actress. Known for her leading roles in films encompassing a variety of genres, she has received multiple accolades, including an Academy Award, a British Academy Film Award, and three Golden Globe Awards. The films in which she has starred have collectively grossed over $3.9 billion globally, making her one of Hollywood's most bankable stars.[2] After an early breakthrough with appearances in Mystic Pizza (1988) and Steel Magnolias (1989), Roberts established herself as a leading actress when she headlined the top-grossing romantic comedy Pretty Woman (1990).\r\n\r\nShe starred in numerous commercially successful films throughout the 1990s, including the romantic comedies My Best Friend's Wedding (1997), Notting Hill (1999) and Runaway Bride (1999). She won the Academy Award for Best Actress for playing the title role in the biographical drama Erin Brockovich (2000). Roberts achieved further film success in the following decades with Ocean's Eleven (2001), Ocean's Twelve (2004), Charlie Wilson's War (2007), Valentine's Day (2010), Eat Pray Love (2010), August: Osage County (2013), Wonder (2017), Ticket to Paradise (2022), and Leave the World Behind (2023). Roberts also received a Primetime Emmy Award nomination for the HBO television film The Normal Heart (2014), had her first regular television role in the first season of the Amazon Prime Video psychological thriller series Homecoming (2018), and portrayed Martha Mitchell in the Starz political limited series Gaslit (2022).\r\n\r\nIn addition to acting, Roberts runs the production company Red Om Films, through which she has served as an executive producer for various projects she has starred in, as well as for the first four films of the American Girl franchise (2004–2008). She has acted as the global ambassador for Lancôme since 2009. She was the world's highest-paid actress throughout the majority of the 1990s and the first half of the 2000s.[3][4][5] She received a then-unprecedented fees of $20 million and $25 million for her roles in Erin Brockovich (2000) and Mona Lisa Smile (2003), respectively. As of 2020, Roberts' net worth was estimated to be $250 million. People magazine has named her the most beautiful woman in the world a record five times.",
+    "time_create": "2024-03-10T21:20:12.039Z",
+    "time_update": "2024-04-08T01:44:30.674Z",
+    "is_published": true,
+    "cat": 1,
+    "spouse": 2,
+    "author": null,
+    "tags": []
+  }
+},
+{
+  "model": "stars.stars",
+  "pk": 4,
+  "fields": {
+    "title": "Ryan Gosling",
+    "slug": "ryan-gosling",
+    "photo": "photos/2024/04/07/Ryan_Gosling.jpeg",
+    "content": "Ryan Thomas Gosling (/ˈɡɒslɪŋ/ GOSS-ling; born November 12, 1980) is a Canadian actor. Prominent in both independent film and major studio features of varying genres, his films have accrued a worldwide box office gross of over $1.9 billion dollars. He has received various accolades, including a Golden Globe Award, as well as nominations for three Academy Awards and two BAFTAs.\r\n\r\nGosling rose to prominence at age 13 on Disney Channel's The Mickey Mouse Club (1993–1995), and went on to appear in other family entertainment programs, including Are You Afraid of the Dark? (1995) and Goosebumps (1996). His breakthrough film role was as a Jewish neo-Nazi in The Believer (2001), and he gained stardom for starring in the 2004 romantic drama The Notebook.\r\n\r\nGosling starred in the critically acclaimed independent dramas Half Nelson (2006), for which he was nominated for the Academy Award for Best Actor; Lars and the Real Girl (2007), and Blue Valentine (2010). He starred in three mainstream successes in 2011: the romantic comedy Crazy, Stupid, Love, the political drama The Ides of March, and the action thriller Drive. After making his directorial debut with Lost River (2014), Gosling starred in the financial satire The Big Short (2015), the action comedy The Nice Guys (2016), and the romantic musical La La Land (2016), the latter of which won him a Golden Globe and a second Academy Award nomination for Best Actor. Further acclaim followed with the science fiction film Blade Runner 2049 (2017) and the biopic First Man (2018). In 2023, he played Ken in the fantasy comedy Barbie, which emerged as his highest-grossing release and earned him a nomination for the Academy Award for Best Supporting Actor.\r\n\r\nGosling's band, Dead Man's Bones, released their self-titled debut album and toured North America in 2009. He is a co-owner of Tagine, a Moroccan restaurant in Beverly Hills, California. Gosling is a supporter of PETA, Invisible Children, and the Enough Project and has traveled to Chad, Uganda and eastern Congo to raise awareness about conflicts in the regions. Gosling has been involved in peace promotion efforts in Africa for over a decade. He is in a relationship with actress Eva Mendes, with whom he has two daughters.",
+    "time_create": "2024-03-10T21:46:28.569Z",
+    "time_update": "2024-04-08T01:35:19.915Z",
+    "is_published": true,
+    "cat": 1,
+    "spouse": null,
+    "author": null,
+    "tags": []
+  }
+},
+{
+  "model": "stars.stars",
+  "pk": 5,
+  "fields": {
+    "title": "Ariana Grande",
+    "slug": "ariana-grande",
+    "photo": "photos/2024/04/07/Ariana_Grande.jpg",
+    "content": "Ariana Grande-Butera (born June 26, 1993) is an American singer, songwriter, and actress. Regarded as a pop icon, she is noted as an influential figure in popular music and as one of the most prominent vocalists of her generation for her four-octave vocal range and signature whistle register. Grande has received numerous accolades throughout her career, including one Brit Award, two Grammy Awards, two Billboard Music Awards, three American Music Awards, nine MTV Video Music Awards, and 35 Guinness World Records. Rolling Stone ranked her amongst the greatest singers of all time.\r\n\r\nGrande began her career at age 15 by appearing in the Broadway musical 13 (2008). She rose to prominence for her performance as Cat Valentine in the Nickelodeon television series Victorious (2010–2013), as well as the spin-off follow-up series Sam & Cat (2013-2014), and signed with Republic Records in 2011. Grande's debut studio album, Yours Truly (2013), incorporated retro-pop and R&B elements and yielded the successful single \"The Way\". My Everything (2014), her second album, experimented with EDM and catapulted her to worldwide stardom through the singles \"Problem\", \"Break Free\", and \"Bang Bang\". Grande further explored pop and R&B with her third album Dangerous Woman (2016), which solidified her critical and commercial success.",
+    "time_create": "2024-03-23T17:03:06.828Z",
+    "time_update": "2024-04-08T01:44:18.478Z",
+    "is_published": true,
+    "cat": 2,
+    "spouse": null,
+    "author": null,
+    "tags": [
+      2,
+      5
+    ]
+  }
+},
+{
+  "model": "stars.stars",
+  "pk": 35,
+  "fields": {
+    "title": "Rihanna",
+    "slug": "rihanna",
+    "photo": "photos/2024/04/07/rihanna_sjGRSdK.jpg",
+    "content": "Robyn Rihanna Fenty (/riˈænə/ born February 20, 1988) is a Barbadian singer, businesswoman, actress, and songwriter. Widely regarded as one of the most prominent recording artists of the 21st century, she signed with Def Jam Recordings in 2005 and found mainstream recognition following the release of her first two studio albums, Music of the Sun (2005) and A Girl Like Me (2006). Both influenced by Caribbean music, the albums quickly earned commercial success and peaked within the top ten on the US Billboard 200 chart. Her third album, Good Girl Gone Bad (2007), incorporated elements of dance-pop, and established her status as a major icon in the music industry. Its lead single, \"Umbrella\" (featuring Jay-Z) peaked atop the US Billboard Hot 100 (among 16 other countries), won her first Grammy Award from three nominations, and remains one of the best-selling singles of all time.",
+    "time_create": "2024-04-07T20:50:43.409Z",
+    "time_update": "2024-04-07T21:48:10.582Z",
+    "is_published": true,
+    "cat": 2,
+    "spouse": null,
+    "author": null,
+    "tags": []
+  }
+},
+{
+  "model": "stars.stars",
+  "pk": 36,
+  "fields": {
+    "title": "Shakira",
+    "slug": "shakira",
+    "photo": "photos/2024/04/07/Shakira.jpg",
+    "content": "Shakira Isabel Mebarak Ripoll (/ʃəˈkɪərə/ shə-KEER-ə, Spanish: [ʃaˈkiɾa isaˈβel meβaˈɾak riˈpol]; born 2 February 1977), known mononymously as Shakira, is a Colombian singer and songwriter. Born and raised in Barranquilla, she has been referred to as the \"Queen of Latin Music\" and has been praised for her musical versatility. She made her recording debut with Sony Music Colombia at the age of 13. Following the commercial failure of her first two albums, Magia (1991) and Peligro (1993), she rose to prominence in Hispanic countries with her next albums, Pies Descalzos (1995) and Dónde Están los Ladrones? (1998). She entered the English-language market with her fifth album, Laundry Service (2001), which sold over 13 million copies worldwide. Buoyed by the international success of her singles \"Whenever, Wherever\" and \"Underneath Your Clothes\", the album propelled her reputation as a leading crossover artist. Broadcast Music, Inc. described Shakira as a \"pioneer\" who extended the global reach of Latino singers. In 2022, MTV included her in the list of \"The Most Influential Women in the History of Music\", being the only Latina on the list.",
+    "time_create": "2024-04-08T01:51:09.158Z",
+    "time_update": "2024-04-08T01:51:09.158Z",
+    "is_published": true,
+    "cat": 2,
+    "spouse": null,
+    "author": null,
+    "tags": [
+      1
+    ]
+  }
+},
+{
+  "model": "stars.stars",
+  "pk": 37,
+  "fields": {
+    "title": "Anastasia Ashley",
+    "slug": "anastasia_ashley",
+    "photo": "photos/2024/04/07/Anastasia_Ashley.jpeg",
+    "content": "Ashley was born in San Clemente, California on February 10, 1987. She began surfing at the age of 5 right before moving to Hawaii. At the age of 6, she won a surf contest using a run-down board that she found in a trash can outside of her house. By the age of 7, she picked up a sponsor to replace her run-down board with new ones.\r\n\r\nIn 2003, she received the Triple Crown Rookie of the Year award. At the age of 16, Ashley won her first major national title. Later, she also won titles including two National Scholastic Surfing Association championships and the Professional Surfing Tour of America championship. Ashley won the 2010 Pipeline Women's Pro in Hawaii. She appeared in the Sports Illustrated Swimsuit Edition in 2014. As of September 8, 2014, Ashley is ranked 59th in the 2014 Women's Qualification Series.\r\n\r\nIn September 2014, she started her own Gypsy Jet Set jewelry line in collaboration with OK1984, a jewelry company. She was featured in the October 2014 issue of Maxim magazine. In November 2014, she went to Ireland for a Web Summit on how to maintain a competitive edge in surfing with a focus on social media tools. Ashley was interested in convincing Taoiseach Enda Kenny to surf.\r\n\r\nAshley appeared on Hell's Kitchen in the third episode of Season 14 where she taught the team challenge winners how to surf. She also attended as a dining room guest in that episode's dinner service.",
+    "time_create": "2024-04-08T02:00:13.224Z",
+    "time_update": "2024-04-08T02:00:13.224Z",
+    "is_published": true,
+    "cat": 3,
+    "spouse": null,
+    "author": null,
+    "tags": [
+      2,
+      5
+    ]
+  }
+},
+{
+  "model": "stars.stars",
+  "pk": 66,
+  "fields": {
+    "title": "Madonna Louise Ciccone",
+    "slug": "madonna",
+    "photo": "photos/2024/04/20/Madonna.jpeg",
+    "content": "Madonna Louise Ciccone (/tʃɪˈkoʊni/; born August 16, 1958) is an American singer, songwriter, and actress. Commonly known as the \"Queen of Pop\", she has been widely recognized for her continual reinvention and versatility in music production, songwriting and visual presentation. Madonna's works, which incorporate social, political, sexual, and religious themes, have generated both controversy and critical acclaim. A prominent cultural figure spanning both the 20th and 21st centuries, she remains one of the most \"well-documented figures of the modern age\", with a broad array of scholarly reviews, literature, and art works about her, as well as an academic mini subdiscipline devoted to her called Madonna studies.\r\n\r\nMadonna moved to New York City in 1978 to pursue a career in modern dance. After performing as a drummer, guitarist, and vocalist in the rock bands Breakfast Club and Emmy, she rose to solo stardom with her 1983 eponymous debut studio album. Madonna followed it with a series of successful albums, including all-time bestsellers Like a Virgin (1984), True Blue (1986), and The Immaculate Collection (1990), as well as Grammy Award winners Ray of Light (1998) and Confessions on a Dance Floor (2005). Throughout her career, she has amassed many chart-topping singles, including \"Like a Virgin\", \"La Isla Bonita\", \"Like a Prayer\", \"Vogue\", \"Take a Bow\", \"Frozen\", \"Music\", \"Hung Up\" and \"4 Minutes\".\r\n\r\nMadonna's popularity was enhanced by roles in films such as Desperately Seeking Susan (1985), Dick Tracy (1990), A League of Their Own (1992) and Evita (1996). While the lattermost won her a Golden Globe Award for Best Actress, many of her other films were not as well received. As a businesswoman, she founded the company Maverick in 1992, which included Maverick Records, one of the most successful artist-run labels in history. Madonna's other ventures include fashion brands, written works, health clubs and filmmaking. She contributes to various charities, having founded the Ray of Light Foundation in 1998 and Raising Malawi in 2006, and advocates for gender equality and LGBT rights.\r\n\r\nWith sales of over 300 million records worldwide, Madonna is the best-selling female recording artist of all time. She is the most successful solo artist in the history of the US Billboard Hot 100 chart and has achieved the most number-one singles by a woman in Australia (11), Canada (24), Italy (23), Spain (21), and the UK (13). One of the highest-grossing touring artists in history, she became the first ever woman to accumulate US$1 billion in concert revenue. Forbes has named her the world's highest-paid female musician a record 11 times across four separate decades (1980s–2010s). Madonna was inducted into the Rock and Roll Hall of Fame in 2008, her first year of eligibility. She was ranked as the greatest woman in music by VH1, and as the greatest music video artist ever by MTV and Billboard. She was also listed among Rolling Stone's greatest artists and greatest songwriters of all time.",
+    "time_create": "2024-04-20T18:18:37.137Z",
+    "time_update": "2024-04-20T18:18:37.137Z",
+    "is_published": true,
+    "cat": 2,
+    "spouse": null,
+    "author": null,
+    "tags": [
+      2
+    ]
+  }
+},
+{
+  "model": "stars.stars",
+  "pk": 67,
+  "fields": {
+    "title": "Maria Yuryevna Sharapova",
+    "slug": "maria-yuryevna-sharapova",
+    "photo": "photos/2024/04/20/Maria_Sharapova.jpeg",
+    "content": "Maria Yuryevna Sharapova (Russian: Мария Юрьевна Шарапова, pronounced [mɐˈrʲijə ʂɐˈrapəvə]; born 19 April 1987) is a Russian former world No. 1 tennis player. She competed on the WTA Tour from 2001 to 2020 and was ranked world No. 1 in singles by the Women's Tennis Association (WTA) for 21 weeks. She is one of ten women to achieve the career Grand Slam. She is also an Olympic medalist, having won silver in women's singles at the 2012 London Olympics. She has been considered as one of the best tennis competitors of her generation.\r\n\r\nSharapova became the world No. 1 for the first time on 22 August 2005 at the age of 18, becoming the first Russian woman to top the singles rankings, and last held the position on 8 July 2012. She won five major titles — two at the French Open and one each at the Australian Open, Wimbledon, and the US Open. She won 36 titles in total, including the year-end championships on her debut in 2004. She also won three doubles titles. Although she played under the banner of Russia with the WTA, she has lived in and been a United States permanent resident since 1994.\r\n\r\nSharapova failed a drug test at the 2016 Australian Open, testing positive for meldonium, a substance that had been banned (effective 1 January 2016) by the World Anti-Doping Agency (WADA). On 8 June 2016, she was suspended from playing tennis for two years by the International Tennis Federation (ITF). On 4 October 2016, the suspension was reduced to 15 months, starting from the date of the failed test, as the Court of Arbitration for Sport found that she had committed \"no significant fault\" and that she had taken the substance \"based on a doctor's recommendation… with good faith belief that it was appropriate and compliant with the relevant rules\". She returned to the WTA Tour on 26 April 2017 at the Porsche Tennis Grand Prix.\r\n\r\nSharapova has been featured in a number of modeling assignments, including a feature in the Sports Illustrated Swimsuit Issue. She has appeared in many advertisements, including those for Nike, Prince, and Canon, and has been the face of several fashion houses, most notably Cole Haan. Since February 2007, she has been a United Nations Development Programme Goodwill Ambassador, concerned specifically with the Chernobyl Recovery and Development Programme. In June 2011, she was named one of the \"30 Legends of Women's Tennis: Past, Present and Future\" by Time and in March 2012 was named one of the \"100 Greatest of All Time\" by Tennis Channel. According to Forbes, she was the highest-paid female athlete in the world for 11 consecutive years and earned US$285 million (including prize money) since she turned professional in 2001. In 2018, she launched a new program to mentor women entrepreneurs.",
+    "time_create": "2024-04-20T18:26:08.933Z",
+    "time_update": "2024-04-30T02:27:44.328Z",
+    "is_published": true,
+    "cat": 3,
+    "spouse": null,
+    "author": null,
+    "tags": [
+      2,
+      4,
+      5
+    ]
+  }
+},
+{
+  "model": "stars.category",
+  "pk": 1,
+  "fields": {
+    "name": "Actors",
+    "slug": "actors"
+  }
+},
+{
+  "model": "stars.category",
+  "pk": 2,
+  "fields": {
+    "name": "Singers",
+    "slug": "singers"
+  }
+},
+{
+  "model": "stars.category",
+  "pk": 3,
+  "fields": {
+    "name": "Athletes",
+    "slug": "athletes"
+  }
+},
+{
+  "model": "stars.tagpost",
+  "pk": 1,
+  "fields": {
+    "tag": "Blondes",
+    "slug": "blondes"
+  }
+},
+{
+  "model": "stars.tagpost",
+  "pk": 2,
+  "fields": {
+    "tag": "Brunettes",
+    "slug": "brunettes"
+  }
+},
+{
+  "model": "stars.tagpost",
+  "pk": 3,
+  "fields": {
+    "tag": "Oskar",
+    "slug": "oskar"
+  }
+},
+{
+  "model": "stars.tagpost",
+  "pk": 4,
+  "fields": {
+    "tag": "Olympiad",
+    "slug": "olympiad"
+  }
+},
+{
+  "model": "stars.tagpost",
+  "pk": 5,
+  "fields": {
+    "tag": "High",
+    "slug": "high"
+  }
+},
+{
+  "model": "stars.tagpost",
+  "pk": 6,
+  "fields": {
+    "tag": "Average",
+    "slug": "average"
+  }
+},
+{
+  "model": "stars.tagpost",
+  "pk": 7,
+  "fields": {
+    "tag": "Low",
+    "slug": "low"
+  }
+},
+{
+  "model": "stars.spouse",
+  "pk": 1,
+  "fields": {
+    "name": "Brad Pitt",
+    "age": 30,
+    "m_count": 2
+  }
+},
+{
+  "model": "stars.spouse",
+  "pk": 2,
+  "fields": {
+    "name": "Tom Ackerley",
+    "age": 31,
+    "m_count": 1
+  }
+},
+{
+  "model": "stars.spouse",
+  "pk": 3,
+  "fields": {
+    "name": "Daniel Moder",
+    "age": 25,
+    "m_count": 1
+  }
+},
+{
+  "model": "stars.spouse",
+  "pk": 4,
+  "fields": {
+    "name": "Maroni Cook",
+    "age": 40,
+    "m_count": 1
+  }
+},
+{
+  "model": "users.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$hxgunIEt5eHVBxTdTwcQ28$KUya9rc5nvP0lHfrwV7RmMc9vH+XqgvFZCZVm3lKTFQ=",
+    "last_login": "2024-05-06T15:03:11.552Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "Valentyn",
+    "last_name": "Krasnokutskyi",
+    "email": "admin@starsbio.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2024-04-29T22:13:27.818Z",
+    "photo": "users/2024/04/29/myphoto.jpg",
+    "date_birth": "1924-01-01T00:00:00Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$oDwGhJZOJ1r6ac36T0oaBd$oiOw/mMoS525z6ruhOyFgKwFUEQ2PJgb2F/iA+Z2OsE=",
+    "last_login": "2024-05-05T00:01:20.989Z",
+    "is_superuser": false,
+    "username": "user1",
+    "first_name": "Valentyn",
+    "last_name": "Krasnokutskyi",
+    "email": "kras.vvk@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-04-30T02:16:08Z",
+    "photo": "",
+    "date_birth": null,
+    "groups": [
+      1
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$9mZxSUw0rdzif542mRQ18l$Bb9hnlXnZEju4gY3lzbVaHQ+MNJTEyxmq2F8cfYIocE=",
+    "last_login": "2024-04-30T23:34:11.399Z",
+    "is_superuser": false,
+    "username": "user2",
+    "first_name": "Valentyn",
+    "last_name": "Krasnokutskyi",
+    "email": "user2@email.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-04-30T23:04:08Z",
+    "photo": "",
+    "date_birth": null,
+    "groups": [],
+    "user_permissions": [
+      30
+    ]
+  }
+},
+{
+  "model": "users.user",
+  "pk": 6,
+  "fields": {
+    "password": "!sN3e2Ygc6hs3FEY2UZRbKdN5XG2TnrNJNLWTEbDm",
+    "last_login": "2024-05-06T15:54:09.649Z",
+    "is_superuser": false,
+    "username": "ValentynKrasnokutskyi",
+    "first_name": "Valentyn",
+    "last_name": "Krasnokutskyi",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-05-04T23:59:13.715Z",
+    "photo": "",
+    "date_birth": "1981-01-01T00:00:00Z",
+    "groups": [
+      2
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 9,
+  "fields": {
+    "password": "!VAk6fkHXGqy3BWKHFShBhYbsF5KNE2YA09aVtUYi",
+    "last_login": "2024-05-06T15:53:58.233Z",
+    "is_superuser": false,
+    "username": "kras.vvk",
+    "first_name": "Valentin0vv0",
+    "last_name": "",
+    "email": "kras.vvk@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-05-06T15:12:11.549Z",
+    "photo": "",
+    "date_birth": null,
+    "groups": [
+      2
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "social_django.usersocialauth",
+  "pk": 3,
+  "fields": {
+    "user": 6,
+    "provider": "github",
+    "uid": "119133601",
+    "extra_data": {
+      "auth_time": 1715010849,
+      "id": 119133601,
+      "expires": null,
+      "login": "ValentynKrasnokutskyi",
+      "access_token": "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",
+      "token_type": "bearer"
+    },
+    "created": "2024-05-04T23:59:13.747Z",
+    "modified": "2024-05-06T15:54:09.594Z"
+  }
+},
+{
+  "model": "social_django.usersocialauth",
+  "pk": 6,
+  "fields": {
+    "user": 9,
+    "provider": "google-oauth2",
+    "uid": "kras.vvk@gmail.com",
+    "extra_data": {
+      "auth_time": 1715010838,
+      "expires": 3599,
+      "token_type": "Bearer",
+      "access_token": "ya29.a0AXooCguRfbIILUGvfwmYfOiTNhcZHZWhdVLz-5onfhX0WexRzp-880_H37ok86eOwp9JAbFE3_m3TzNQcRp7hTGvOrybh8vL1bTvmbS68XDq6SLeQ9o12k1EaObiNSJ0vVbRpVFzmOk6JsWzChr4sjJFcb_XanKoBiowaCgYKAcYSARISFQHGX2MiCHTXswqr8WZqGx0hhHNBbg0171"
+    },
+    "created": "2024-05-06T15:12:11.586Z",
+    "modified": "2024-05-06T15:53:58.176Z"
+  }
+}
+]
