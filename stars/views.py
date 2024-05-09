@@ -1,5 +1,6 @@
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
+from django.core.cache import cache
 from django.http import HttpResponse, HttpResponseNotFound, Http404
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse, reverse_lazy
@@ -20,7 +21,12 @@ class StarsHome(DataMixin, ListView):  # View for displaying the main page
     cat_selected = 0
 
     def get_queryset(self):  # Get objects to display on the page
-        return Stars.published.all().select_related('cat')  # All published articles
+        s_lst = cache.get('stars_posts')
+        if not s_lst:
+            s_lst = Stars.published.all().select_related('cat')  # All published articles
+            cache.set('stars_posts', s_lst, 15)
+
+        return s_lst
 
 
 @login_required  # @login_required(login_url='/admin/')
