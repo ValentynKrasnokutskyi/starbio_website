@@ -8,7 +8,7 @@ from django.template.defaultfilters import slugify
 from django.views import View
 from django.views.generic import TemplateView, ListView, DetailView, FormView, CreateView, UpdateView
 
-from .forms import AddPostForm, UploadFileForm
+from .forms import AddPostForm, UploadFileForm, ContactForm
 from .models import Stars, Category, TagPost, UploadFiles
 from .utils import DataMixin
 
@@ -72,8 +72,15 @@ class UpdatePage(PermissionRequiredMixin, DataMixin, UpdateView):  # View for ed
     permission_required = 'stars.change_stars'
 
 
-def contact(request):  # View for the contact page
-    return HttpResponse("Feedback")  # Placeholder for handling feedback
+class ContactFormView(LoginRequiredMixin, DataMixin, FormView):
+    form_class = ContactForm
+    template_name = 'stars/contact.html'
+    success_url = reverse_lazy('home')
+    title_page = "Feedback"
+
+    def form_valid(self, form):
+        print(form.cleaned_data)
+        return super().form_valid(form)
 
 
 def login(request):  # View for the login page
