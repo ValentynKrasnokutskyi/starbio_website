@@ -1,6 +1,6 @@
-from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.core.cache import cache
+from django.core.mail import send_mail
 from django.http import HttpResponse, HttpResponseNotFound, Http404
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse, reverse_lazy
@@ -9,8 +9,9 @@ from django.template.defaultfilters import slugify
 from django.views import View
 from django.views.generic import TemplateView, ListView, DetailView, FormView, CreateView, UpdateView
 
-from .forms import AddPostForm, UploadFileForm, ContactForm
-from .models import Stars, Category, TagPost, UploadFiles
+from starbio import settings
+from .forms import AddPostForm,  ContactForm
+from .models import Stars, Category, TagPost  # UploadFiles
 from .utils import DataMixin
 
 
@@ -25,22 +26,15 @@ class StarsHome(DataMixin, ListView):  # View for displaying the main page
         if not s_lst:
             s_lst = Stars.published.all().select_related('cat')  # All published articles
             cache.set('stars_posts', s_lst, 15)
-
         return s_lst
 
 
-@login_required  # @login_required(login_url='/admin/')
 def about(request):
-    if request.method == "POST":
-        form = UploadFileForm(request.POST, request.FILES)
-        if form.is_valid():
-            #  handle_uploaded_file(form.cleaned_data['file'])
-            fp = UploadFiles(file=form.cleaned_data['file'])
-            fp.save()
-    else:
-        form = UploadFileForm()
+    file_path = 'templates/content/about.txt'  # Path to the file with project information
+    with open(file_path, 'r') as file:
+        project_info = file.read()
     return render(request, 'stars/about.html',
-                  {'title': 'About', 'form': form})
+                  {'title': 'About', 'project_info': project_info})
 
 
 class ShowPost(DataMixin, DetailView):
@@ -85,12 +79,19 @@ class ContactFormView(LoginRequiredMixin, DataMixin, FormView):
     title_page = "Feedback"
 
     def form_valid(self, form):
-        print(form.cleaned_data)
+        # Receiving data from the form
+        name = form.cleaned_data['name']
+        email = form.cleaned_data['email']
+        message = form.cleaned_data['content']
+
+        # Sending letter
+        send_mail(
+            'Feedback from {}'.format(name),
+            'Message: {}\nFrom: {}'.format(message, email),
+            settings.DEFAULT_FROM_EMAIL,
+            [settings.DEFAULT_FROM_EMAIL],
+        )
         return super().form_valid(form)
-
-
-def login(request):  # View for the login page
-    return HttpResponse("Authorization")  # Placeholder for handling authorization
 
 
 class StarsCategory(DataMixin, ListView):  # View for displaying articles in a category

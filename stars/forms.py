@@ -1,8 +1,11 @@
 from captcha.fields import CaptchaField
 from django import forms
+from django.contrib.auth import get_user_model
 from django.core.exceptions import ValidationError
 
 from .models import Category, Spouse, Stars
+
+
 
 import re
 
@@ -34,10 +37,6 @@ class AddPostForm(forms.ModelForm):  # Form for adding a new post
             raise ValidationError("Must only contain alphabetic characters, hyphen and space or invalid input format!")
 
         return title
-
-
-class UploadFileForm(forms.Form):
-    file = forms.ImageField(label="Image")
 
 
 class ContactForm(forms.Form):
