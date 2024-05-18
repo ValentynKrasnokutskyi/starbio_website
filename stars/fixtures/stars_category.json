@@ -1,0 +1,1 @@
+[{"model": "stars.category", "pk": 1, "fields": {"name": "Actors", "slug": "actors"}}, {"model": "stars.category", "pk": 2, "fields": {"name": "Singers", "slug": "singers"}}, {"model": "stars.category", "pk": 3, "fields": {"name": "Athletes", "slug": "athletes"}}]
