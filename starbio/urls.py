@@ -14,31 +14,31 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path, include
+from django.contrib.sitemaps.views import sitemap
+from django.urls import include, path
 from django.views.decorators.cache import cache_page
 
 from starbio import settings
-from stars import views
-from stars.sitemaps import PostSitemap, CategorySitemap
+from stars.sitemaps import CategorySitemap, PostSitemap
 from stars.views import page_not_found
 
-from django.contrib.sitemaps.views import sitemap
-
 sitemaps = {
-    'posts': PostSitemap,
-    'cats': CategorySitemap,
+    "posts": PostSitemap,
+    "cats": CategorySitemap,
 }
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('stars.urls')),
-    path('users/', include('users.urls', namespace="users")),
+    path("admin/", admin.site.urls),
+    path("", include("stars.urls")),
+    path("users/", include("users.urls", namespace="users")),
     path("__debug__/", include("debug_toolbar.urls")),
-    path('social-auth/', include('social_django.urls', namespace='social')),
-    path('captcha/', include('captcha.urls')),
-    path('sitemap.xml', cache_page(3600)(sitemap), {'sitemaps': sitemaps}, name="django.contrib.sitemaps.views.sitemap"),
+    path("social-auth/", include("social_django.urls", namespace="social")),
+    path("captcha/", include("captcha.urls")),
+    path("sitemap.xml", cache_page(3600)(sitemap), {"sitemaps": sitemaps},
+         name="django.contrib.sitemaps.views.sitemap",),
 ]
 
 if settings.DEBUG:

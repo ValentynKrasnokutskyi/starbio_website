@@ -1,10 +1,10 @@
 from django.contrib.sitemaps import Sitemap
 
-from stars.models import Stars, Category
+from stars.models import Category, Stars
 
 
 class PostSitemap(Sitemap):
-    changefreq = 'monthly'
+    changefreq = "monthly"
     priority = 0.9
 
     def items(self):
@@ -15,7 +15,7 @@ class PostSitemap(Sitemap):
 
 
 class CategorySitemap(Sitemap):
-    changefreq = 'monthly'
+    changefreq = "monthly"
     priority = 0.9
 
     def items(self):
