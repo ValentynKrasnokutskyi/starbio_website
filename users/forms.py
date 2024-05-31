@@ -8,9 +8,8 @@ from django.contrib.auth.forms import (AuthenticationForm, PasswordChangeForm,
 
 class LoginUserForm(AuthenticationForm):
     """
-    A form for authenticating users.
+        Form for authenticating users.
     """
-
     username = forms.CharField(label="Login", widget=forms.TextInput(attrs={"class": "form-input"}))
     password = forms.CharField(label="Password", widget=forms.PasswordInput(attrs={"class": "form-input"}))
 
@@ -21,9 +20,8 @@ class LoginUserForm(AuthenticationForm):
 
 class RegisterUserForm(UserCreationForm):
     """
-    A form for registering new users.
+        Form for user registration.
     """
-
     username = forms.CharField(label="Login", widget=forms.TextInput(attrs={"class": "form-input"}))
     password1 = forms.CharField(label="Password", widget=forms.PasswordInput(attrs={"class": "form-input"}))
     password2 = forms.CharField(label="Repeat password", widget=forms.PasswordInput(attrs={"class": "form-input"}))
@@ -51,7 +49,7 @@ class RegisterUserForm(UserCreationForm):
 
     def clean_email(self):
         """
-        Checking the uniqueness of Email
+            Checking the uniqueness of Email
         """
         email = self.cleaned_data["email"]
         if get_user_model().objects.filter(email=email).exists():
@@ -61,9 +59,8 @@ class RegisterUserForm(UserCreationForm):
 
 class ProfileUserForm(forms.ModelForm):
     """
-    A form for updating user profile information.
+        Form for updating user profile information.
     """
-
     username = forms.CharField(disabled=True, label="Login", widget=forms.TextInput(attrs={"class": "form-input"}))
     email = forms.CharField(disabled=True, required=False, label="E-mail",
                             widget=forms.TextInput(attrs={"class": "form-input"}))
@@ -82,9 +79,8 @@ class ProfileUserForm(forms.ModelForm):
 
 class UserPasswordChangeForm(PasswordChangeForm):
     """
-    A form for changing user password.
+        Form for changing user password.
     """
-
     old_password = forms.CharField(label="Old password", widget=forms.PasswordInput(attrs={"class": "form-input"}))
     new_password1 = forms.CharField(label="New password", widget=forms.PasswordInput(attrs={"class": "form-input"}))
     new_password2 = forms.CharField(label="Password confirmation",

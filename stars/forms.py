@@ -57,7 +57,7 @@ class AddPostForm(forms.ModelForm):  # Form for adding a new post
         return title
 
 
-class ContactForm(forms.Form):
+class ContactForm(forms.Form):  # Form for contacting
     name = forms.CharField(label="Name", max_length=255)
     email = forms.EmailField(label="Email")
     content = forms.CharField(widget=forms.Textarea(attrs={"cols": 60, "rows": 10}))

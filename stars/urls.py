@@ -3,8 +3,10 @@ from django.views.decorators.cache import cache_page
 
 from . import converters, views
 
+# Register custom converter for four-digit years
 register_converter(converters.FourDigitYearConverter, "year4")
 
+# URL patterns
 urlpatterns = [
     path("", views.StarsHome.as_view(), name="home"),  # http://127.0.0.1:8000
     path("about/", views.about, name="about"),

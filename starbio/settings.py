@@ -51,7 +51,6 @@ ALLOWED_HOSTS = ["127.0.0.1"]
 INTERNAL_IPS = ["127.0.0.1"]
 
 # Application definition
-
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
@@ -183,6 +182,7 @@ LOGIN_REDIRECT_URL = "home"
 LOGOUT_REDIRECT_URL = "home"
 LOGIN_URL = "users:login"
 
+# OAuth
 AUTHENTICATION_BACKENDS = [
     "social_core.backends.google.GoogleOAuth2",
     "social_core.backends.github.GithubOAuth2",

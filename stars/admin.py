@@ -23,7 +23,7 @@ class MarriedFilter(admin.SimpleListFilter):
 
 # Registering the Stars model with the admin panel
 @admin.register(Stars)
-class WomenAdmin(admin.ModelAdmin):
+class StarsAdmin(admin.ModelAdmin):
     # Define the fields to be displayed and configured in the admin interface
     fields = [
         "title",
@@ -53,9 +53,9 @@ class WomenAdmin(admin.ModelAdmin):
 
     # Custom method to display a brief info about the star
     @admin.display(description="Image")
-    def post_photo(self, women: Stars):
-        if women.photo:
-            return mark_safe(f"<img src='{women.photo.url}' width=50>")
+    def post_photo(self, stars: Stars):
+        if stars.photo:
+            return mark_safe(f"<img src='{stars.photo.url}' width=50>")
         return "Without photo"
 
     # Custom action to publish selected posts
@@ -76,6 +76,5 @@ class WomenAdmin(admin.ModelAdmin):
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ("id", "name",)  # Displayed columns in the admin list view
     list_display_links = ("id", "name",)  # Make the category name clickable to view details
-
 
 # admin.site.register(Stars, StarsAdmin)  # Registering the Stars model with the admin panel
