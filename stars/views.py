@@ -7,12 +7,18 @@ from django.shortcuts import get_object_or_404, render
 from django.urls import reverse_lazy
 from django.views.generic import (CreateView, DetailView, FormView, ListView,
                                   UpdateView)
+from rest_framework.response import Response
+from rest_framework import viewsets
+from rest_framework.decorators import action
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
+from rest_framework.pagination import PageNumberPagination
 
 from starbio import settings
 
 from .forms import AddPostForm, ContactForm
-from .models import Stars, TagPost
+from .models import Stars, TagPost, Category
 from .utils import DataMixin
+from .serializers import StarsSerializer
 
 
 class StarsHome(DataMixin, ListView):
@@ -170,3 +176,84 @@ class TagPostList(DataMixin, ListView):
             Get objects to display on the page.
         """
         return Stars.published.filter(tags__slug=self.kwargs["tag_slug"]).select_related("cat")  # Articles by tag
+
+# === DRF === #
+class StarsViewSetPagination(PageNumberPagination):
+    """
+        Pagination class settings DRF.
+    """
+    page_size = 3
+    page_size_query_param = 'page_size'
+    max_page_size = 4
+
+class StarsViewSet(viewsets.ModelViewSet):
+    """
+        ViewSet for the Stars model DRF
+    """
+    queryset = Stars.objects.all()  # Defines the queryset for all Stars objects
+    serializer_class = StarsSerializer  # Specifies the serializer for the Stars model
+
+    # Sets access permissions: authenticated users can modify, others can only read
+    permission_classes = (IsAuthenticatedOrReadOnly,)
+
+    # Specifies the pagination class for this ViewSet
+    pagination_class = StarsViewSetPagination
+
+    # Custom action to get a list of categories
+    @action(methods=['get'], detail=False)
+    def category(self, request):
+        cats = Category.objects.all()  # Get all Category objects
+        return Response({'cats': [c.name for c in cats]})  # Returns a list of category names
+# ---------------------------------
+# class StarsAPIList(generics. ListCreateAPIView):
+#     queryset = Stars.objects.all()
+#     serializer_class = StarsSerializer
+#
+# class StarsAPIUpdate(generics.UpdateAPIView):
+#     queryset = Stars.objects.all()
+#     serializer_class = StarsSerializer
+#
+# class StarsAPIDetailView(generics.RetrieveUpdateDestroyAPIView):
+#     queryset = Stars.objects.all()
+#     serializer_class = StarsSerializer
+
+# ----------------
+# class StarsAPIView(APIView):
+#     def get(self, request):
+#         s = Stars.objects.all()
+#         return Response({'posts': StarsSerializer(s, many=True).data})
+#
+#     def post(self, request):
+#         serializer = StarsSerializer(data=request.data)
+#         serializer.is_valid(raise_exception=True)
+#         serializer.save()
+#         return Response({'post': serializer.data})
+#
+#     def put(self, request, *args, **kwargs):
+#         pk = kwargs.get("pk", None)
+#         if not pk:
+#             return Response({"error": "Method PUT not allowed"})
+#
+#         try:
+#             instance = Stars.objects.get(pk=pk)
+#         except:
+#             return Response({"error": "Object does not exists"})
+#
+#         serializer = StarsSerializer(data=request.data, instance=instance)
+#         serializer.is_valid(raise_exception=True)
+#         serializer.save()
+#
+#         return Response({"post": serializer.data})
+#
+#     def delete(self, request, *args, **kwargs):
+#         pk = kwargs.get("pk", None)
+#         if not pk:
+#             return Response({"error": "Method DELETE not allowed"})
+#         try:
+#             instance = Stars.objects.get(pk=pk)
+#         except:
+#             return Response({"error": "Object does not exists"})
+#
+#         instance.delete()
+#
+#         return Response({"post": "delete post " + str(pk)})

@@ -66,6 +66,7 @@ INSTALLED_APPS = [
     "captcha",
     "django.contrib.sites",
     "django.contrib.sitemaps",
+    "rest_framework",
 ]
 
 MIDDLEWARE = [
@@ -228,3 +229,17 @@ SOCIAL_AUTH_PIPELINE = (
 )
 
 SITE_ID = 1
+
+#  DRF
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 2,
+
+    'DEFAULT_RENDERER_CLASSES': [
+        'rest_framework.renderers.JSONRenderer',  # Renders responses in JSON format
+    ]
+}
+
+if DEBUG:
+    # Provides a browsable API for development
+    REST_FRAMEWORK['DEFAULT_RENDERER_CLASSES'].append('rest_framework.renderers.BrowsableAPIRenderer')
